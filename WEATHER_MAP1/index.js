@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     searchButton.addEventListener("click", function () {
         const cityName = cityInput.value;
-        const apiKey = 'f41a246a8f470c1ca2af0b4af29c7cc5';
+        const apiKey = '';
 
         fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${apiKey}`)
             .then((response) => response.json())
