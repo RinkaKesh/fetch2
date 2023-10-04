@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <header>
+        <div class="search-container">
+            <input type="text" id="cityInput" placeholder="Enter City">
+            <button id="searchButton">Search</button>
+        </div>
+    </header>
+    <a href="index2.html" class="forecast-link">5-Day Forecast</a>
+    <main>
+        <section id="weather">
+            <h2>Weather Details</h2>
+            <div id="weatherDetails">
+            </div>
+        </section>
+
+        <section id="map">
+            <iframe id="mapFrame" width="600" height="400" frameborder="0" style="border:0" allowfullscreen></iframe>
+        </section>
+        
+    </main>
+    <footer>
+    </footer>
+    <script src="index.js"></script>
+</body>
+</html>
