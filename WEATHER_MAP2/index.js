@@ -34,25 +34,25 @@ document.addEventListener("DOMContentLoaded", function () {
 
 document.addEventListener("DOMContentLoaded", function () {
     const forecastSection = document.getElementById("forecast");
-    const cityName = "YOUR_CITY_NAME"; // Replace with the city name from the previous search
+    const cityName = "YOUR_CITY_NAME"; 
 
-    // You should replace 'YOUR_OPENWEATHERMAP_API_KEY' with your actual API key.
-    const apiKey = '';
 
-    // Fetch 5-day forecast data from OpenWeatherMap API
+    const apiKey = 'a12cc418e4162f3dcad20528697132cf';
+
+
     fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${cityName}&appid=${apiKey}&units=metric`)
         .then((response) => response.json())
         .then((data) => {
             const forecasts = data.list;
 
-            // Display the 5-day forecast
+            
             forecasts.forEach((forecast) => {
                 const date = new Date(forecast.dt * 1000);
                 const day = date.toLocaleDateString("en-US", { weekday: "short" });
                 const temperature = forecast.main.temp;
                 const description = forecast.weather[0].description;
 
-                // Create a forecast card
+                
                 const forecastCard = document.createElement("div");
                 forecastCard.classList.add("forecast-card");
                 forecastCard.innerHTML = `
